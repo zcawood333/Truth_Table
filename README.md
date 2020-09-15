@@ -8,8 +8,11 @@ Argument expression must use single-letter variables, is case insensitive, must 
 There is no guarantee for correct output if formatting of input is incorrect. Made on windows, not tested on other platforms.
 
 Correct operators:
+
 \* = AND 
-+ = OR 
+
+\+ = OR 
+
 ' = NOT(INVERSION) 
 
 ex. for command line: python truth_table.py "(a*b')+(a'*b)"
