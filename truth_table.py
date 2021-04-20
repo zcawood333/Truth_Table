@@ -91,15 +91,17 @@ def main(input_exp = None):
         output.append(1 if eval(curr_exp) else 0)
     
     #display output
+    print('| MINTERM |',end='')
     for literal in variables:
         print(f'|    {literal.letter}    |',end='')
     print('|   OUT   |')
-    print("-"*(11*(num_variables+1)))
+    print("-"*(11*(num_variables+2)))
     for i in range(2**num_variables):
+        print('|{0:^9}|'.format(i),end='')
         for idx in range(num_variables):
             print(f'|    {variable_vals[idx][i]}    |',end='')
         print(f'|    {output[i]}    |')
-        print("-"*(11*(num_variables+1)))
+        print("-"*(11*(num_variables+2)))
         
 if __name__ == '__main__':
     main()
